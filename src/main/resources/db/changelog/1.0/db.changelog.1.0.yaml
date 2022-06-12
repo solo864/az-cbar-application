@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      author: Musayev Anar
+      id: create table rates
+      changes:
+        - createTable:
+            tableName: rates
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: nominal
+                  type: VARCHAR(8)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: value
+                  type: NUMERIC(16,4)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: code
+                  type: VARCHAR(64)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: VARCHAR(16)
+                  constraints:
+                    nullable: false
+#              - column:
+#                  name: status
+#                  type: VARCHAR(16)
+#                  constraints:
+#                    nullable: false
+              - column:
+                  name: date
+                  type: DATE
+                  constraints:
+                    nullable: false
