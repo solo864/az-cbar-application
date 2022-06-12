@@ -30,7 +30,7 @@ public class RateController {
 
     @DeleteMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteRateByDate(Local date) {
+    public void deleteRateByDate(LocalDate date) {
         rateService.deleteByDate(date);
     }
 
