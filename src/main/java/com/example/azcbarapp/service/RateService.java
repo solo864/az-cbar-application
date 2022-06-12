@@ -31,7 +31,7 @@ public class RateService {
     private final RateRepository rateRepository;
     private final CbarClient cbarClient;
 
-    public void save(Local date) {
+    public void save(LocalDate date) {
 
         log.info("ActionLog.save.start date:{} ", date);
 
@@ -82,7 +82,7 @@ public class RateService {
     }
 
 
-    public void deleteByDate(Local date) {
+    public void deleteByDate(LocalDate date) {
         log.info("ActionLog.deleteByDate.start: date {}", date);
 
         rateRepository.deleteAllByDate(date);
