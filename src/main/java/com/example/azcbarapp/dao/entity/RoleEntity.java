@@ -31,7 +31,7 @@ public class RoleEntity {
             joinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "user_id",referencedColumnName = "id")
     )
-    List<UserEntity> users;
+    private List<UserEntity> users;
 
 
 
